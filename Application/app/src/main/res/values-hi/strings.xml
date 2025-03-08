@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Authentication Screen -->
+    <string name="sign_up">साइन अप करें</string>
+    <string name="sign_in">साइन इन करें</string>
+    <string name="email">ईमेल</string>
+    <string name="password">पासवर्ड</string>
+    <string name="user_type">उपयोगकर्ता प्रकार</string>
+    <string name="already_have_account">पहले से ही एक खाता है? साइन इन करें</string>
+    <string name="dont_have_account">खाता नहीं है? साइन अप करें</string>
+    <string name="farmer_dashboard">किसान डैशबोर्ड</string>
+    <string name="consumer_dashboard">उपभोक्ता डैशबोर्ड</string>
+
+    <!-- Dashboard Buttons -->
+    <string name="add_product">उत्पाद जोड़ें</string>
+    <string name="modify_delete_product">उत्पाद संपादित/हटाएं</string>
+    <string name="view_orders">आदेश देखें</string>
+    <string name="track_earnings">आय को ट्रैक करें</string>
+    <string name="browse_products">उत्पाद ब्राउज़ करें</string>
+    <string name="order_history">आदेश इतिहास</string>
+
+    <!-- Product Details -->
+    <string name="product_name">उत्पाद का नाम</string>
+    <string name="product_price">उत्पाद की कीमत</string>
+    <string name="tap_to_select_image">छवि चुनने के लिए टैप करें</string>
+    <string name="add_product_success">उत्पाद सफलतापूर्वक जोड़ा गया!</string>
+    <string name="failed_to_add_product">उत्पाद जोड़ने में विफल</string>
+    <string name="save_changes">परिवर्तन सहेजें</string>
+    <string name="delete_product">उत्पाद हटाएं</string>
+
+    <!-- Orders -->
+    <string name="order">आदेश</string>
+    <string name="accept">स्वीकार करें</string>
+    <string name="reject">अस्वीकार करें</string>
+    <string name="order_success">आदेश सफलतापूर्वक रखा गया!</string>
+    <string name="order_failed">आदेश देने में विफल</string>
+    <string name="order_status">स्थिति: %1$s</string>
+    <string name="product">उत्पाद: %1$s</string>
+    <string name="calculating_earnings">आय की गणना हो रही है...</string>
+    <string name="total_earnings">कुल आय</string>
+    <string name="updated_real_time">वास्तविक समय में अद्यतन</string>
+
+    <!-- Misc -->
+    <string name="select_product_modify">संशोधित करने के लिए उत्पाद चुनें</string>
+    <string name="no_products_found">कोई उत्पाद नहीं मिला।</string>
+    <string name="app_name">किसान कनेक्ट</string>
+    <string name="price">मूल्य: ₹%1$s</string>
+    <string name="search_products">उत्पाद खोजें</string>
+</resources>

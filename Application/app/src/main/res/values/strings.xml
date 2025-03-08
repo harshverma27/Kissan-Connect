@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Authentication Screen -->
+    <string name="sign_up">"Sign Up"</string>
+    <string name="sign_in">"Sign In"</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="user_type">User Type</string>
+    <string name="already_have_account">Already have an account? Sign In</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+    <string name="farmer_dashboard">Farmer Dashboard</string>
+    <string name="consumer_dashboard">Consumer Dashboard</string>
+
+    <!-- Dashboard Buttons -->
+    <string name="add_product">Add Product</string>
+    <string name="modify_delete_product">Modify/Delete Product</string>
+    <string name="view_orders">View Orders</string>
+    <string name="track_earnings">Track Earnings</string>
+    <string name="browse_products">Browse Products</string>
+    <string name="order_history">Order History</string>
+
+    <!-- Product Details -->
+    <string name="product_name">Product Name</string>
+    <string name="product_price">Product Price</string>
+    <string name="tap_to_select_image">Tap to select an image</string>
+    <string name="add_product_success">Product added successfully!</string>
+    <string name="failed_to_add_product">Failed to add product</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="delete_product">Delete Product</string>
+
+    <!-- Orders -->
+    <string name="order">Order</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="order_success">Order placed successfully!</string>
+    <string name="order_failed">Failed to place order</string>
+    <string name="order_status">Status: %1$s</string>
+    <string name="product">Product: %1$s</string>
+    <string name="calculating_earnings">Calculating earnings...</string>
+    <string name="total_earnings">Total Earnings</string>
+    <string name="updated_real_time">Updated in real-time</string>
+
+    <!-- Misc -->
+    <string name="select_product_modify">Select Product to Modify</string>
+    <string name="no_products_found">No products found.</string>
+    <string name="app_name">Kissan Connect</string>
+    <string name="price">Price: ₹%1$s</string>
+    <string name="search_products">Search Products</string>
+</resources>
