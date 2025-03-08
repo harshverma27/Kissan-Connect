@@ -39,15 +39,15 @@ This application directly connects **farmers** and **consumers**, eliminating in
 ## **🎨 UI/UX Enhancements**
 ✅ **Clickable, shadowed, white background cards** for buttons  
 ✅ **BoxItem redesign** with smooth animations  
-✅ **Dark mode-friendly text and icons**  
 ✅ **Loading indicators** for long tasks (image uploads, fetching data)  
 ✅ **Snackbar & Toast alerts** for successful operations
 
 ---
 ## **🔗 Next Steps / Possible Improvements**
 ✅ **AI Scanning** (Adding Product By Scanning Them) 
-✅ **Photos** can be added for more simpler UI  
+✅ **Icons** can be added for more simpler UI  
 ✅ **Dark Mode Support**
+✅ **Logistics Features** can be added in future if idea successfully worked.
 
 ---
 ## **📜 Technologies Used**
