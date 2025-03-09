@@ -629,7 +629,6 @@ fun ModifyProductScreen(navController: NavController, productId: String) {
         }
     }
 }
-
 fun updateProduct(
     db: FirebaseFirestore,
     storage: FirebaseStorage,
@@ -641,24 +640,49 @@ fun updateProduct(
     context: Context,
     navController: NavController
 ) {
+    val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
     if (newImageUri != null) {
-        val storageRef = storage.reference.child("products/${UUID.randomUUID()}.jpg")
+        val storageRef = storage.reference.child("products/$userId/${UUID.randomUUID()}.jpg")
+
+        // ✅ Delete old image first
+        if (oldImageUrl.isNotEmpty()) {
+            val oldImageRef = storage.getReferenceFromUrl(oldImageUrl)
+            oldImageRef.delete().addOnFailureListener {
+                Log.e("FirebaseStorage", "Failed to delete old image: ${it.message}")
+            }
+        }
+
+        // ✅ Upload new image
         storageRef.putFile(newImageUri).addOnSuccessListener {
             storageRef.downloadUrl.addOnSuccessListener { newImageUrl ->
                 db.collection("products").document(productId)
-                    .update(mapOf("name" to name, "price" to price, "imageUrl" to newImageUrl.toString()))
+                    .update(
+                        mapOf(
+                            "name" to name,
+                            "price" to price,
+                            "imageUrl" to newImageUrl.toString()
+                        )
+                    )
                     .addOnSuccessListener {
                         Toast.makeText(context, "Product updated successfully!", Toast.LENGTH_SHORT).show()
                         navController.popBackStack()
                     }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(context, "Update failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
             }
         }
     } else {
+        // ✅ No image change, just update text fields
         db.collection("products").document(productId)
             .update(mapOf("name" to name, "price" to price))
             .addOnSuccessListener {
                 Toast.makeText(context, "Product updated successfully!", Toast.LENGTH_SHORT).show()
                 navController.popBackStack()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(context, "Update failed: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
 }
@@ -1013,7 +1037,7 @@ fun ProductItem(product: Product, consumerId: String?, navController: NavControl
 
                 Column {
                     Text(text = product.name, style = MaterialTheme.typography.bodyLarge)
-                    Text(text = stringResource(R.string.price, product.price), style = MaterialTheme.typography.bodyMedium)
+                    Text(text = "${stringResource(R.string.price)} ${product.price}", style = MaterialTheme.typography.bodyMedium)
                 }
             }
 

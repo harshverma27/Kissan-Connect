@@ -44,6 +44,6 @@
     <string name="select_product_modify">संशोधित करने के लिए उत्पाद चुनें</string>
     <string name="no_products_found">कोई उत्पाद नहीं मिला।</string>
     <string name="app_name">किसान कनेक्ट</string>
-    <string name="price">मूल्य: ₹%1$s</string>
+    <string name="price">मूल्य: ₹</string>
     <string name="search_products">उत्पाद खोजें</string>
 </resources>
